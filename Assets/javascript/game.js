@@ -3,7 +3,7 @@ window.onload = function () {
     var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
           'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
           't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    var possibleWords =["apple","diamonds","cake","books","animals","rainbow"];
+    var possibleWords =["apple","diamonds","cake","books","animals","rainbow","sun","moon"];
     var getHint ;          // Word getHint
     var word ;              // Selected word
     var guess ;             // Guess
@@ -52,11 +52,26 @@ window.onload = function () {
           }
         }
     }
+    function updateGuesses(letter) {      
+        if (word.indexOf(letter) === -1) { 
+          wrongGuesses.push(letter);
+          lettersGuessedElement.innerHTML = wrongGuesses.join(', ');
+        } else {
+          // replace underscore with the letter
+          for (var i = 0; i < word.length; i++) {
+            if (word[i] === letter) {
+              correctGuesses[i] = letter;
+            }
+          }
+      
+          wordElement.innerHTML = correctGuesses.join(' ');
+        }
+      }
     play = function(){
         word = possibleWords[Math.floor(Math.random()*possibleWords.length)]
         word = word.replace(/\s/g,"-");
         for (var i = 0; i < word.length; i++){
-            underscore.innerHTML = " _ "
+            underscore.innerHTML = (" _ "+" ")
             console.log("_")
             
         }
@@ -69,8 +84,12 @@ window.onload = function () {
         comments();
     }
     play();
+
     document.onkeyup = function(event){
-        
+        console.log(event);
+        var guess = String.fromCharCode(event.keyCode).toLowerCase();
+        updateGuesses(letterGuessed);
+        comments();
     }
 
 // ending currly
