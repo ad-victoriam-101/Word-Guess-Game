@@ -1,0 +1,32 @@
+#buttons{
+    position: relative;
+    border-radius: 5px;
+    background:lightblue;
+    color:white;
+    border: solid 1px white;
+    text-decoration:none;
+    cursor:pointer;
+    font-size:1.2em;
+    padding:18px 10px;
+    margin: 10px;
+}
+#alphabet li {
+    position: relative;
+    margin: 0 10px 10px 0;
+    list-style:none;
+    padding: 5px;
+    background:white;
+    color: lightblue;
+    cursor:pointer;
+    border: solid 1px white;
+    border-radius: 5px;
+    text-align: center;
+    display: inline;
+}
+#mylives{
+    color:wheat;
+    text-align: center;
+}
+body{
+    background:darkgray;
+}

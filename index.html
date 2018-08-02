@@ -6,7 +6,8 @@
     <title>Hangman the Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="Assets/css/style.css"/>
     <script src="./Assets/javascript/game.js"></script>
 </head>
 <body>
@@ -19,18 +20,18 @@
         <!-- this row will have the letters on it -->
         <div class="row">
             <!-- letters avalible -->
-            <div class="col-md-6">
-
+            <div class="col">
+                    <div id="buttons">
+                    </div>
             </div>
             <!-- letters guessed -->
-            <div class="col-md-6">
-
-            </div>
         </div>
         <!-- where the game is played -->
         <div class="container">
+            <h2 id = "mylives"></h2>
             <!-- "-" generate here and where the user imputs guesses-->
             <div class="container">
+                <h3 id ="wordUnderscore"></h3>
                 <!-- user input -->
                 <div class="container">
 
